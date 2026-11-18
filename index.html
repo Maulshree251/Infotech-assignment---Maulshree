@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simplifying Compliance for Research Analysts</title>
+
+  <!-- Google Fonts: Roboto, Inter, Poppins, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Montserrat:wght@700&family=Poppins:wght@500;600&family=Roboto:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo-link" aria-label="Home">
+        <img src="Assets/Logo.png" alt="Company Logo" class="logo-img">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About us</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Our Services</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop/Tablet Right Actions -->
+      <div class="nav-actions">
+        <a href="#contact-us" class="btn btn-primary btn-contact desktop-tablet-contact">
+          <div class="btn-icon" aria-hidden="true"></div>
+          <span class="btn-text">Contact us</span>
+        </a>
+
+        <!-- Hamburger Menu Button (Tablet & Mobile) -->
+        <button class="menu-toggle-btn" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <img src="Assets/Menu.png" alt="" class="menu-icon" aria-hidden="true">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile & Tablet Navigation Drawer Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <!-- Mobile & Tablet Navigation Drawer Menu -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="#" class="drawer-logo-link">
+        <img src="Assets/Logo.png" alt="Company Logo" class="drawer-logo-img">
+      </a>
+      <button class="drawer-close-btn" id="drawerClose" aria-label="Close Navigation Menu">
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="#home" class="drawer-nav-link active">
+            <span class="drawer-link-left">
+              <img src="Assets/Home.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">Home</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#about" class="drawer-nav-link">
+            <span class="drawer-link-left">
+              <img src="Assets/AboutUs.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">About Us</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#services" class="drawer-nav-link">
+            <span class="drawer-link-left">
+              <img src="Assets/Our Services.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">Our Services</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#pricing" class="drawer-nav-link">
+            <span class="drawer-link-left">
+              <img src="Assets/Pricing.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">Pricing</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#faq" class="drawer-nav-link">
+            <span class="drawer-link-left">
+              <img src="Assets/FAQ.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">FAQ</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="#contact" class="drawer-nav-link">
+            <span class="drawer-link-left">
+              <img src="Assets/Contact.png" alt="" class="drawer-nav-icon" aria-hidden="true">
+              <span class="drawer-nav-text">Contact</span>
+            </span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="drawer-footer">
+        <a href="#contact-us" class="btn btn-primary btn-drawer-contact">
+          <span class="btn-text">Contact us</span>
+          <div class="btn-icon" aria-hidden="true"></div>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <!-- Decorative background blur -->
+      <div class="hero-bg-blur" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <!-- Hero Content (Left on Desktop, Top on Tablet/Mobile) -->
+        <div class="hero-content">
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">
+              Simplifying
+              <span class="title-highlight"><span>Compliance</span>
+                <img src="Assets/underline-Vector.png" alt="" class="title-underline-vector" aria-hidden="true">
+              </span>
+              For
+              Research Analysts
+            </h1>
+          </div>
+
+          <p class="hero-description">
+            Stay focused on your insights—we’ll handle the compliance. Our expert solutions ensure your research
+            practices meet every regulatory requirement with confidence and ease
+          </p>
+
+          <!-- Bullet Checklist -->
+          <ul class="hero-checklist">
+            <li class="checklist-item">
+              <img src="Assets/check-sign.png" alt="" class="check-icon" aria-hidden="true">
+              <span class="checklist-text">End-to-end compliance support</span>
+            </li>
+            <li class="checklist-item">
+              <img src="Assets/check-sign.png" alt="" class="check-icon" aria-hidden="true">
+              <span class="checklist-text">Regulatory filings made simple</span>
+            </li>
+            <li class="checklist-item">
+              <img src="Assets/check-sign.png" alt="" class="check-icon" aria-hidden="true">
+              <span class="checklist-text">Tailored solutions for independent analysts & firms</span>
+            </li>
+          </ul>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-buttons">
+            <a href="#get-started" class="btn btn-primary btn-hero">
+              <span class="btn-text">Get Started</span>
+            </a>
+            <a href="#book-consultation" class="btn btn-outline btn-hero">
+              <span class="btn-text">Book a Consultation</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Right on Desktop, Bottom on Tablet/Mobile) -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="Assets/Banner Image.png"
+              alt="Compliance illustration showing analyst working on insights with certification badges and rating metrics"
+              class="hero-banner-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY COMPLIANCE MATTERS -->
+    <section class="compliance-section" id="services">
+      <div class="compliance-container">
+        <!-- Section Header -->
+        <div class="compliance-header">
+          <div class="compliance-header-left">
+            <h2 class="compliance-title">Why <span>Compliance Matters</span> for Research Analysts</h2>
+          </div>
+          <div class="compliance-header-right">
+            <p class="compliance-description">
+              In today’s regulatory environment, even a small oversight can lead to penalties, reputational risks, and
+              loss of client trust. We help Research Analysts and firms navigate complex compliance requirements so they
+              can focus on delivering high-quality research without worry.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section Content: Illustration + 3 Feature Cards -->
+        <div class="compliance-content">
+          <!-- Left: Illustration -->
+          <div class="compliance-visual">
+            <img src="Assets/Section2-Image.png"
+              alt="Compliance analytics dashboard showing audit metrics and regulatory risk protection"
+              class="compliance-img">
+            <div class="decor-vector-accent-img decor-vector-accent" aria-hidden="true">
+              <img src="Assets/Vector2.png" alt="" class="decor-vector-accent-image">
+            </div>
+            <div class="decor-vector-bottom compliance-decorations" aria-hidden="true">
+              <img src="Assets/Vector1.png" alt="" class="decor-vector-bottom-image">
+            </div>
+          </div>
+
+          <!-- Right: 3 Feature Cards -->
+          <div class="compliance-cards">
+            <!-- Card 1 -->
+            <div class="feature-card" tabindex="0">
+              <div class="card-inner">
+                <div class="card-icon-wrapper">
+                  <img src="Assets/Regulatory Clarity.png" alt="" class="card-icon" aria-hidden="true">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Regulatory Clarity</h3>
+                  <p class="card-text">We decode complex compliance rules into simple, actionable steps.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card" tabindex="0">
+              <div class="card-inner">
+                <div class="card-icon-wrapper">
+                  <img src="Assets/Hassle-Free Filings Clarity.png" alt="" class="card-icon" aria-hidden="true">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Hassle-Free Filings Clarity</h3>
+                  <p class="card-text">From registration to ongoing reporting—we manage it end-to-end.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card" tabindex="0">
+              <div class="card-inner">
+                <div class="card-icon-wrapper">
+                  <img src="Assets/Risk Protection.png" alt="" class="card-icon" aria-hidden="true">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Risk Protection</h3>
+                  <p class="card-text">Stay ahead of audits, inspections, and compliance gaps with proactive support.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
