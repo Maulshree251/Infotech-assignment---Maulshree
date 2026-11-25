@@ -382,6 +382,7 @@ button {
   display: flex;
   align-items: center;
   gap: 16px;
+  text-transform: capitalize;
 }
 
 .check-icon {
@@ -464,6 +465,7 @@ button {
 
 .compliance-header-left {
   max-width: 603.5px;
+  flex: 1;
 }
 
 .compliance-title {
@@ -472,7 +474,8 @@ button {
   font-weight: 600;
   line-height: 70px;
   color: var(--color-text-main);
-  text-align: center;
+  /* text-align: center; */
+  text-transform: capitalize;
 }
 
 .compliance-title span {
@@ -481,6 +484,7 @@ button {
 
 .compliance-header-right {
   max-width: 603.5px;
+  flex: 1;
 }
 
 .compliance-description {
@@ -490,7 +494,6 @@ button {
   line-height: 32px;
   color: var(--color-text-main);
   text-transform: capitalize;
-  text-align: center;
 }
 
 /* Content Area: Illustration Left, 3 Cards Right */
@@ -521,18 +524,20 @@ button {
 
 .compliance-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
+  display: block;
 }
 
 /* Decorative Flourish Vector Accent (Vector2.png) */
 .decor-vector-accent,
 .decor-vector-accent-img {
   position: absolute;
-  right: 2%;
+  width: calc(36 / 594 * 100%);
+  right: 9%;
   top: -14.5%;
-  width: 36px;
-  height: 129px;
+  height: auto;
+  aspect-ratio: 36 / 129;
   opacity: 1;
   pointer-events: none;
   z-index: 2;
@@ -787,6 +792,24 @@ button {
 
 
 /* ==========================================================================
+   RESPONSIVE BREAKPOINTS (SMALL DESKTOP / LAPTOP: 1025px - 1440px)
+   ========================================================================== */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .compliance-visual {
+    width: calc((100vw - 252px) / 2);
+    max-width: 594px;
+    padding: calc(30 / 594 * 100%);
+  }
+
+  .compliance-img-wrapper {
+    width: calc((100vw - 252px) / 2);
+    max-width: 100%;
+    height: auto;
+    padding: calc(30 / 594 * 100%);
+  }
+}
+
+/* ==========================================================================
    RESPONSIVE BREAKPOINTS (TABLET: 768px - 1024px)
    ========================================================================== */
 @media screen and (max-width: 1024px) {
@@ -821,7 +844,7 @@ button {
   .hero-content {
     width: 100%;
     max-width: 636px;
-    padding: 24px 16px 36px 16px;
+    padding: 24px 16px 20px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -863,7 +886,7 @@ button {
 
   .hero-checklist {
     align-items: flex-start;
-    margin-bottom: 36px;
+    margin-bottom: 25px;
   }
 
   .hero-buttons {
@@ -900,6 +923,7 @@ button {
   .compliance-title {
     font-size: 46px;
     line-height: 60px;
+    text-align: center;
   }
 
   .compliance-content {
@@ -918,11 +942,11 @@ button {
 
   .decor-vector-accent,
   .decor-vector-accent-img {
-    top: -10%;
-    right: 10%;
-    width: 36px;
-    height: 129px;
-    opacity: 1;
+    right: 0%;
+    top: -6%;
+    width: calc(36 / 594 * 100%);
+    height: auto;
+    aspect-ratio: 36 / 129;
   }
 
   .compliance-decorations,
@@ -931,6 +955,10 @@ button {
     bottom: 0px;
     width: 162px;
     height: 34px;
+  }
+
+  .compliance-description {
+    text-align: center;
   }
 
   .compliance-cards {
@@ -985,7 +1013,7 @@ button {
   .hero-content {
     width: 100%;
     max-width: 343px;
-    padding: 20px 4px 36px 4px;
+    padding: 20px 4px 20px 4px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1035,7 +1063,7 @@ button {
 
   .hero-checklist {
     gap: 8px;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
     width: 100%;
     max-width: 315px;
   }
@@ -1143,11 +1171,13 @@ button {
   .compliance-title {
     font-size: 34px;
     line-height: 48px;
+    text-align: center;
   }
 
   .compliance-description {
     font-size: 18px;
     line-height: 32px;
+    text-align: center;
   }
 
   .compliance-visual {
@@ -1159,10 +1189,8 @@ button {
 
   .decor-vector-accent,
   .decor-vector-accent-img {
-    right: 20%;
-    top: -10%;
-    width: 26px;
-    height: 93px;
+    right: 0%;
+    top: -8%;
     opacity: 1;
   }
 
@@ -1203,14 +1231,14 @@ button {
   }
 }
 
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 767px) {
 
   .decor-vector-accent,
   .decor-vector-accent-img {
     /* left: calc(350 / 343 * 100%);
     top: calc(-30 / 343 * 100%); */
-    top: -10%;
-    right: 20%;
+    top: -4%;
+    right: 4%;
     width: calc(26 / 343 * 100%);
     height: auto;
     aspect-ratio: 26 / 93;
