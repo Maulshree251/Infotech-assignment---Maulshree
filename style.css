@@ -244,6 +244,7 @@ button {
   font-weight: 500;
   color: var(--color-text-nav);
   padding: 8px 4px;
+  white-space: nowrap;
   transition: color var(--transition-fast);
   position: relative;
 }
@@ -367,6 +368,7 @@ button {
   color: var(--color-text-main);
   margin-bottom: 26px;
   text-transform: capitalize;
+
 }
 
 /* Checklist */
@@ -376,6 +378,7 @@ button {
   gap: 6px;
   margin-bottom: 38px;
   text-transform: capitalize;
+
 }
 
 .checklist-item {
@@ -809,6 +812,16 @@ button {
   }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .nav-list {
+    gap: 18px;
+  }
+}
+
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (TABLET: 768px - 1024px)
    ========================================================================== */
@@ -835,7 +848,7 @@ button {
 
   /* Hero Section Tablet */
   .hero-container {
-    padding: 40px 30px 60px 30px;
+    padding: 40px 28px 60px 30px;
     flex-direction: column;
     align-items: center;
 
@@ -929,7 +942,7 @@ button {
   .compliance-content {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
   }
 
   .compliance-visual {
@@ -949,6 +962,10 @@ button {
     aspect-ratio: 36 / 129;
   }
 
+  .compliance-img-wrapper {
+    margin-bottom: 5.5%;
+  }
+
   .compliance-decorations,
   .decor-vector-bottom {
     left: -87px;
@@ -959,12 +976,13 @@ button {
 
   .compliance-description {
     text-align: center;
-    padding: 0% 5% 0% 5%;
+    padding: 0 7% 0 6%;
+
   }
 
   .compliance-cards {
     width: 100%;
-    max-width: 613px;
+    max-width: 728px;
     gap: 26px;
   }
 
@@ -1011,10 +1029,14 @@ button {
     min-height: auto;
   }
 
+  .hero-container {
+    padding: 0 20px 0px 20px;
+  }
+
   .hero-content {
     width: 100%;
     max-width: 343px;
-    padding: 20px 4px 20px 4px;
+    padding: 20px 0px 20px 0px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1067,6 +1089,7 @@ button {
     margin-bottom: 25px;
     width: 100%;
     max-width: 315px;
+    text-align: left;
   }
 
   .checklist-item {
@@ -1194,6 +1217,8 @@ button {
     top: -8%;
     opacity: 1;
   }
+
+
 
   .compliance-cards {
     max-width: 100%;
